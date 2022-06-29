@@ -26,21 +26,21 @@ function FormPage(props) {
 
     const submit = (e) => {
         e.preventDefault();
-        const empyInputs = [];
-        // console.log(Object.keys(data))
+        const emtpyInputs = [];
+
         for( let i of Object.keys(data)){
             if (data[i] === ''){
-                // console.log(i + '-' + data[i]);
-                empyInputs.push(i)
+
+                emtpyInputs.push(i)
             } else if (data[i] === 0){
-                // console.log(data[i])
-                empyInputs.push(i)
+
+                emtpyInputs.push(i)
             }
 
 
         }
-        // console.log(empyInputs)
-        dispatch(createUserAction(data, empyInputs))
+
+        dispatch(createUserAction(data, emtpyInputs))
 
     }
 
